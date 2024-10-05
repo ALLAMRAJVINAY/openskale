@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ordering Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="logo">
+        <h1>Raj Resto</h1>
+    </div>
+    <nav>
+        <button id="view-order-history">View Order History</button>
+    </nav>
+    <div id="app">
+        <h2>Menu</h2>
+        <div id="menu-items"></div>
+        <h2>Your Order</h2>
+        <form id="order-form">
+            <label for="table-number">Table Number:</label>
+            <input type="text" id="table-number" name="table-number" required>
+
+            <label for="contact-number">Contact Number (Optional):</label>
+            <input type="text" id="contact-number" name="contact-number">
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <div id="order-summary"></div>
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+
+    <div id="order-history" style="display: none;">
+        <h2>Order History</h2>
+        <div id="orders-list"></div>
+        <button onclick="showMenu()">Back to Menu</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
